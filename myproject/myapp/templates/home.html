@@ -1,0 +1,138 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+<title>UCatalog - просто каталог комплектующих</title>
+  <div class="container">
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-grow-1 justify-content-between">
+        <li class="nav-item"><a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24">
+            <title>Product</title>
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+          </svg>
+        </a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Продукты</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">О нас</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">
+          <svg class="bi" width="24" height="24"><use xlink:href="#cart"></use></svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block" style="background-color: #e5e5e5"></div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-3 fw-bold" style="display: flex; justify-content: center; align-items: center">UCatalog</h1>
+    <h3 class="fw-normal text-muted mb-3 fade-in">Просто каталог комплектующих</h3>
+    <h5 class="fw-normal text-muted mb-3 fade-in-delayed">и не только</h5>
+
+  </div>
+</div>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .custom-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .custom-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<div class="custom-container">
+  <div class="custom-card">
+    <div class="headline" style="position: absolute;"><a class="nav-link" href="/videocard">Видеокарты</a></div>
+    <a href="/videocard"><img src="https://img.championat.com/s/1350x900/news/big/x/d/v-set-uteklo-foto-prototipa-videokarty-geforce-rtx-4090_1662452020486342959.jpg" style="border-radius: 15px; width: 500;"></a>
+  </div>
+  <div class="custom-card">
+    <div class="headline" style="position: absolute;">Процессоры</div>
+    <img src="https://avatars.mds.yandex.net/i?id=e3a274517fcede8d74492772bb62b059_l-2938367-images-thumbs&n=13" style="border-radius: 15px; width: 500;">
+  </div>
+</div>
+
+<div class="custom-container">
+  <div class="custom-card">
+    <div class="headline" style="position: absolute;">Материнки</div>
+    <img src="https://i.pinimg.com/originals/36/ed/8f/36ed8f9f5e95ab368ddf3ed369fcec04.jpg" style="border-radius: 15px; width: 500; height: 333.32;">
+  </div>
+  <div class="custom-card">
+    <div class="headline" style="position: absolute;">Оперативная память</div>
+    <img src="https://www.hardwareluxx.ru/images/cdn01/FA3D163750C94C04BA3E3391D843C940/img/AEC5D7BDB19D4E1596346B04C1B0933C/apacer_panther_rage_ddr4_rgb_02_AEC5D7BDB19D4E1596346B04C1B0933C.jpg" style="border-radius: 15px; width: 500;">
+  </div>
+</div>
+
+<script>
+  function checkVisibility() {
+    const cards = document.querySelectorAll('.custom-card');
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        card.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+</script>
+
+<footer class="container py-5" style="padding-bottom: 0 !important;">
+  <div class="row">
+    <div class="col-12 col-md">
+
+    </div>
+    <div class="col-6 col-md">
+      <h5>Компании партнеры</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Nvidia</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Ресурсы</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Пока что нет :(</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

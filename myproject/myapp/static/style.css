@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+* {
+    font-family: "Didact Gothic";
+}
+
+.navigation {
+
+        text-align: center;
+        margin-top: 5;
+        font-size: 25px
+
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.custom-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffff;
+            font-family: Arial, sans-serif;
+}
+
+.custom-card {
+    margin: 50px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center
+}
+
+.headline {
+    margin-top: 150px;
+    margin-left: 215px;
+    font-size: 24px;
+}
+
+.subheading {
+            font-size: 16px;
+            color: #ddd;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+}
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+}
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block !important;
+    }
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(245, 245, 245);
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.product-device {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.display-3 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+ @keyframes fadeIn {
+    from {
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 1.2s ease-in-out 0.5s forwards;
+  }
+
+  .fade-in-delayed {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 2s ease-in-out 1.7s forwards;
+  }
