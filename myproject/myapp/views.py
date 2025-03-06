@@ -8,3 +8,6 @@ def about(request):
 
 def videocard(request):
     return render(request,  'videocard.html')
+
+def cpu(request):
+    return render(request, 'cpu.html')
