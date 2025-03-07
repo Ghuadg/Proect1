@@ -122,3 +122,69 @@ h1 {
     visibility: hidden;
     animation: fadeIn 2s ease-in-out 1.7s forwards;
   }
+
+
+.carttovar {
+    border-radius:20px;
+    height: 300px;
+}
+
+.tovar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0.2, 0.1);
+    background-color: #ffff;
+    margin: 20px;
+    padding: 10px;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+button {
+    border: none;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+pricetovar {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+}
+
+pricetovar span {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+button.send {
+    font-size: 25px;
+    color: white;
+    background-color: #FF1A4F;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.send svg {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+sell {
+    height: 30px;
+    margin-left:10px;
+    background-color:#FF1A4F;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center
+}
