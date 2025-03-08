@@ -188,3 +188,17 @@ sell {
     display: flex;
     align-items: center
 }
+
+.custom-container1 {
+    margin-top: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffff;
+            font-family: Arial, sans-serif;
+}
+
+.col-6 {
+    margin-right: 100px;
+    margin-left: 100px;
+}
